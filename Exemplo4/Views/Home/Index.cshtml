@@ -1,0 +1,37 @@
+﻿@model Exemplo4.Models.StudentVM
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div ng-init="model = @Html.Raw(Json.Encode(Model))">
+    @*<div ng-init="model = @Html.Raw(@Newtonsoft.Json.JsonConverter(Model))">*@
+    Newtonsoft.Json.JsonConvert.SerializeObject
+    <div>
+        <div>
+            @Html.LabelFor(model => model.RollNo)
+            @Html.TextBoxFor(model => model.RollNo, new { autofocus = "" })
+            <input id="Id" type="text" ng-model="model.RollNo">
+        </div>
+    </div>
+
+    <div>
+        <div>
+            @Html.LabelFor(model => model.StudentName)
+            <input id="Id" type="text" ng-model="model.StudentName">
+        </div>
+    </div>
+
+    <div>
+        <div>
+            @Html.LabelFor(model => model.Class)
+            <input id="Id" type="text" ng-model="model.Class">
+        </div>
+    </div>
+
+    <div>
+        <div>
+            @Html.LabelFor(model => model.ClassTeacher)
+            <input id="Id" type="text" ng-model="model.ClassTeacher">
+        </div>
+    </div>
+</div>
