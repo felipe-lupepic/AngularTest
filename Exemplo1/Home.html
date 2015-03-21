@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+</head>
+<body style="font-family:Verdana, Geneva, 'DejaVu Sans', sans-serif">
+    <h1 ng-app ng-controller="HelloWorldCtrl"> {{helloWorldMessage}}</h1>
+
+    <script type="text/javascript">
+        function HelloWorldCtrl($scope) {
+            $scope.helloWorldMessage = "Hello World with AngularJS on " + (new Date()).toDateString();
+        }
+    </script>
+</body>
+</html>
