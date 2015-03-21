@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="eventModule">
+    <head>
+        <title>My Angular Application</title>
+        <link href="../Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="../Scripts/angular-min.js" type="text/javascript"></script>
+        <script src="../Scripts/jquery-1.10.2.min.js"></script>
+        <script src="../Scripts/bootstrap.min.js"></script>
+        <script src="../Scripts/Events/eventModule.js"></script>
+        <script src="../Scripts/Events/eventController.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Talk Details</h2>
+            <div class="row" ng-controller="eventController">
+                <table class="table table-condensed table-hover">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Speaker</th>
+                        <th>Venue</th>
+                        <th>Duration</th>
+                    </tr>
+                    <tr ng-repeat="talk in talks">
+                        <td> {{talk.id}}</td>
+                        <td> {{talk.name}}</td>
+                        <td> {{talk.speaker}}</td>
+                        <td> {{talk.venue}}</td>
+                        <td> {{talk.duration}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
